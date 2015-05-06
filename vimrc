@@ -45,6 +45,7 @@ au BufNewFile,BufRead *.jinja2 set filetype=jinja
 set bg=dark
 set nu
 set expandtab
+set list
 
 colo solarized
 noremap » >
