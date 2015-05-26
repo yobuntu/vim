@@ -42,6 +42,8 @@ endfunction
 
 au BufNewFile,BufRead *.jinja2 set filetype=jinja
 
+autocmd FileType python autocmd BufWritePre <buffer> :call Flake8()
+
 set bg=dark
 set nu
 
