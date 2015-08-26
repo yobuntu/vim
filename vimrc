@@ -22,6 +22,7 @@ Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'rstacruz/sparkup'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'docunext/closetag.vim'
+Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -59,3 +60,7 @@ set list
 colo solarized
 noremap » >
 noremap « <
+
+" specific for backflip / systemscope macro
+let @a = 'V:s/XXX/{interview.study.interviewee_by_tag[Auto-Répondant]}/g'
+let @b = 'V:s/YYY/{interview.tag_by_type[unite]}/g'
