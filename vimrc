@@ -32,6 +32,7 @@ nmap ,f :FufFileWithCurrentBufferDir<CR>
 nmap ,b :FufBuffer<CR>
 nmap ,t :FufTaggedFile<CR>
 
+nnoremap éé <C-W>
 " insert un nom aléatoire
 nnoremap ,n a<C-R>=InsertName()<ESC><ESC>
 function! InsertName()
