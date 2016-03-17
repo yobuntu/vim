@@ -32,7 +32,7 @@ nmap ,f :FufFileWithCurrentBufferDir<CR>
 nmap ,b :FufBuffer<CR>
 nmap ,t :FufTaggedFile<CR>
 
-nnoremap éé <C-W>
+nnoremap é <C-W>
 " insert un nom aléatoire
 nnoremap ,n a<C-R>=InsertName()<ESC><ESC>
 function! InsertName()
@@ -57,10 +57,12 @@ set softtabstop=2
 set foldmethod=indent
 set foldnestmax=2
 set list
+set mouse=a
 
 colo solarized
 noremap » >
 noremap « <
+
 
 " specific for backflip / systemscope macro
 let @a = 'V:s/XXX/{interview.study.interviewee_by_tag[Auto-Répondant]}/g'
