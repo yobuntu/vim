@@ -32,18 +32,6 @@ nmap ,f :FufFileWithCurrentBufferDir<CR>
 nmap ,b :FufBuffer<CR>
 nmap ,t :FufTaggedFile<CR>
 
-nnoremap é <C-W>
-" insert un nom aléatoire
-nnoremap ,n a<C-R>=InsertName()<ESC><ESC>
-function! InsertName()
-  let cmd = 'rig | head -n 1'
-  let result = substitute(system(cmd), '[\]\|[[:cntrl:]]', '', 'g')
-  " Append space + result to current line without moving cursor.
-  return result
-endfunction
-
-au BufNewFile,BufRead *.jinja2 set filetype=jinja
-
 autocmd FileType python autocmd BufWritePre <buffer> :call Flake8()
 
 set bg=dark
@@ -64,6 +52,3 @@ noremap » >
 noremap « <
 
 
-" specific for backflip / systemscope macro
-let @a = 'V:s/XXX/{interview.study.interviewee_by_tag[Auto-Répondant]}/g'
-let @b = 'V:s/YYY/{interview.tag_by_type[unite]}/g'
