@@ -23,6 +23,8 @@ Plugin 'rstacruz/sparkup'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'docunext/closetag.vim'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'scrooloose/nerdtree'
+Plugin 'gnattishness/cscope_maps'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -33,6 +35,7 @@ nmap ,b :FufBuffer<CR>
 nmap ,t :FufTaggedFile<CR>
 
 autocmd FileType python autocmd BufWritePre <buffer> :call Flake8()
+autocmd vimenter * NERDTree
 
 set bg=dark
 set nu
@@ -50,5 +53,3 @@ set mouse=a
 colo solarized
 noremap » >
 noremap « <
-
-
